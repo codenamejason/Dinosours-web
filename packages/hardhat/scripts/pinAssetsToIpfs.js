@@ -12,7 +12,15 @@ const fs = require("fs");
 
 const pinFile = async (path) => {
   const strmFile = fs.createReadStream(path);
-  const result = await pinata.pinFileToIPFS(strmFile);
+  const options = {
+    pinataMetadata: {
+      name: "DinoSours",
+    },
+    pinataOptions: {
+      cidVersion: 0,
+    }
+  };
+  const result = await pinata.pinFileToIPFS(strmFile, options);
 
   return result.IpfsHash;
 };
@@ -35,7 +43,7 @@ const main = async (params) => {
         fs.readFileSync(metaDataPath).toString()
       );
       // add hash to JSON object
-      indexMetaData.image = "https://pharo.mypinata.cloud/ipfs/" + hash;
+      indexMetaData.image = "https://dinosours.mypinata.cloud/ipfs/" + hash;
 
       // write meta data back to file (Optional: You can write JSON directly to IPFS)
       fs.writeFileSync(metaDataPath, JSON.stringify(indexMetaData));
@@ -50,10 +58,10 @@ const main = async (params) => {
   // upload JSON folder to IPFS here
   const options = {
     pinataMetadata: {
-      name: "PharoNew",
+      name: "DinoSours",
       keyvalues: {
         series: "1",
-        minted: "12/2021",
+        minted: "02/2022",
       },
     },
     pinataOptions: {

@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,700|Junge:400");
+
+.footer-font-v1 {
+	font-family: 'Junge';
+	font-style: normal;
+	font-weight: normal;
+	color: #252427;
+}
+
+.footer-font-v2 {
+	font-family: 'Junge';
+	font-style: normal;
+	font-weight: normal;
+	text-decoration-line: underline;
+	color: #6D6C71 !important;
+}
+
+.footer-background {
+	align-items: center;
+	background-color: #C2A800;
+	display: flex;
+	flex-direction: column;
+}
+
+.footerBotHead {
+	height: 116px;
+	width: 200px;
+}

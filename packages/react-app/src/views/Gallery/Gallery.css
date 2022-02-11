@@ -1,0 +1,17 @@
+.intro-title {
+	font-family: 'Junge';
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFBFB;
+
+	text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+.intro-title-subtitle {
+	font-family: 'Junge';
+	font-style: normal;
+	font-weight: normal;
+	color: #B1A3A3;
+
+	text-shadow: 10px 4px 4px rgba(0, 0, 0, 0.7);
+}

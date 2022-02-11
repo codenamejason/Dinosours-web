@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400,700|Junge:400");
+
+  .faq-title {
+	font-family: 'Junge';
+	font-style: normal;
+	font-weight: normal;
+	color: #FFFBFB;
+	text-transform: uppercase;
+  }

@@ -1,0 +1,43 @@
+{
+  "dna": "ec2d9025a0f114f38dad5a21ab40ae6e3e182a39",
+  "name": "#1",
+  "description": "Pharo NFT Collection v1",
+  "image": "/1.png",
+  "edition": 1,
+  "date": 1632854319356,
+  "attributes": [
+    {
+      "trait_type": "BackgroundSuperRare",
+      "value": "BlueWormhole"
+    },
+    {
+      "trait_type": "BodySuperRare",
+      "value": "SolarFlare"
+    },
+    {
+      "trait_type": "ClothesSuperRare",
+      "value": "Galaxy"
+    },
+    {
+      "trait_type": "Silouette",
+      "value": "PinkRage"
+    },
+    {
+      "trait_type": "BeltSuperRare",
+      "value": "SealedFate"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "WhipWomen"
+    },
+    {
+      "trait_type": "HeadSuperRare",
+      "value": "3dGold"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "PurpleAlien"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

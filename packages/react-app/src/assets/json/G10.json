@@ -1,0 +1,43 @@
+{
+  "dna": "39cdf93f2001d54bfd3f6cf486b0ea54b1b221f5",
+  "name": "#2",
+  "description": "Pharo NFT Collection v1",
+  "image": "/2.png",
+  "edition": 2,
+  "date": 1632599200773,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "PalmTree"
+    },
+    {
+      "trait_type": "BodySuperRare",
+      "value": "RedDiamondplate"
+    },
+    {
+      "trait_type": "ClothesSuperRare",
+      "value": "Galaxy"
+    },
+    {
+      "trait_type": "Silouette",
+      "value": "GoldHalo"
+    },
+    {
+      "trait_type": "BeltSuperRare",
+      "value": "SunGod"
+    },
+    {
+      "trait_type": "Accessory",
+      "value": "Spear"
+    },
+    {
+      "trait_type": "HeadSuperRare",
+      "value": "Irridescent"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "GoldenPower"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}

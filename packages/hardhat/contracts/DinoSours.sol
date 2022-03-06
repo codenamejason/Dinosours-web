@@ -24,7 +24,7 @@ contract DinoSours is ERC721, Ownable {
 
     /// @dev Pharo operating wallet
     address public constant treasury =
-        0xAda5A21e1882a69BC623054342c39A7c3D067Bc2;
+        0x695392F1f7900bBB8bcc2Fc6991c22FCb0794342;
 
     constructor() ERC721("DinoSours Collection", "DINOSOURS") {
         _setBaseURI(_baseURI());

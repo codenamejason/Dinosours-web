@@ -14,7 +14,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
-const defaultNetwork = "polygon";
+const defaultNetwork = "localhost";
 const mainnetGwei = 115;
 
 function mnemonic() {

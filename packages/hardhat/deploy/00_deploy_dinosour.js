@@ -14,7 +14,7 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
     log: true,
   });
 
-  const DinoSoursContract = await ethers.getContract("DinoSours");
+  // const DinoSoursContract = await ethers.getContract("DinoSours");
 
   // if (chainId === "31337") {
   //   const deployerWallet = ethers.provider.getSigner();

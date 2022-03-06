@@ -5,18 +5,18 @@ const { solidity } = require("ethereum-waffle");
 use(solidity);
 
 describe("My Dapp", function () {
-  let PharoNFTContract;
+  let DinoSoursContract;
 
   // quick fix to let gas reporter fetch data from gas station & coinmarketcap
   before((done) => {
     setTimeout(done, 2000);
   });
 
-  describe("PharoNFT", function () {
-    it("Should deploy PharoNFT", async function () {
-      const PharoNFT = await ethers.getContractFactory("PharoNFT");
+  describe("DinoSours", function () {
+    it("Should deploy DinoSours", async function () {
+      const DinoSours = await ethers.getContractFactory("DinoSours");
 
-      PharoNFTContract = await PharoNFT.deploy();
+      DinoSoursContract = await DinoSours.deploy();
     });
   });
 });

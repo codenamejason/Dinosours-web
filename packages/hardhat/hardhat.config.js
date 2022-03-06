@@ -148,7 +148,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "X4EQWCBPJFWJT18EIHX72MJYAIWR9NGRWU", // Polygon/Mumbai
+    apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW", // "X4EQWCBPJFWJT18EIHX72MJYAIWR9NGRWU", // Polygon/Mumbai
     // ETH ~ "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
   },
 };

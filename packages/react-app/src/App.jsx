@@ -82,6 +82,7 @@ const web3Modal = new Web3Modal({
           4: "https://eth-rinkeby.alchemyapi.io/v2/nrwWTNXVej-f34VQGCmSyHpKmUjHWg8m",
           42: `https://kovan.infura.io/v3/${INFURA_ID}`,
           100: "https://dai.poa.network", // xDai
+          10: "https://mainnet.optimism.io", // optimism
         },
       },
     },

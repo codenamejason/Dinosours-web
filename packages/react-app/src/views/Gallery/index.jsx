@@ -39,11 +39,11 @@ const Gallery = ({
 
   // todo: add the parameter mintAmount to be passed in
   const mintNft = async mintAmount => {
-    const saleAmount = 0.04;
-    if (mintAmount > 5) {
+    const saleAmount = 0.05;
+    if (mintAmount > 20) {
       return;
     }
-    await tx(writeContracts.DinoSours.mint(address, mintAmount), async update => {
+    await tx(writeContracts.DinoSours.mint(mintAmount), async update => {
       console.log("📡 Transaction Update:", update);
       if (update && (update.status === "confirmed" || update.status === 1)) {
         // reset minting
@@ -66,8 +66,8 @@ const Gallery = ({
   const [totalMinted, setTotalMinted] = useState(0);
   const tokensMinted = async () => {
     (await readContracts) &&
-      readContracts.PharoNFT &&
-      readContracts.PharoNFT.totalSupply().then(e => {
+      readContracts.DinoSours &&
+      readContracts.DinoSours.totalSupply().then(e => {
         setTotalMinted(e);
       });
   };
@@ -83,9 +83,9 @@ const Gallery = ({
         <h1 className="intro-title sm:text-4xl text-5xl">Time of the Pharo</h1>
         {/* I want to show the totalMinted here vvvv */}
         <h3 className="intro-title-subtitle sm:text-2xl text-3xl">
-          {totalMinted.toString()} minted of 5040 Total Supply
+          {totalMinted.toString()} minted of 4444 Total Supply
         </h3>
-        <h4>.04 Polygon ETH</h4>
+        <h4>.05 Optimistic ETH</h4>
       </div>
       <div className="m-auto">
         {isSigner ? (
@@ -93,7 +93,7 @@ const Gallery = ({
             <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
               <div className="lg:w-2/3 md:w-1/2 overflow-hidden sm:mr-10 p-2 flex items-end justify-start relative">
                 <div className="m-auto">
-                  <a href={"https://opensea.io/collection/pharos-nft"} target="_blank">
+                  <a href={"https://quixotic.io/collection/dinosours"} target="_blank">
                     <img src={sample5} />
                   </a>
                 </div>
@@ -105,6 +105,8 @@ const Gallery = ({
                   address={address}
                   readContracts={readContracts}
                   writeContracts={writeContracts}
+                  tx={tx}
+                  mintNft={mintNft}
                 />
               </div>
               <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 align-middle">

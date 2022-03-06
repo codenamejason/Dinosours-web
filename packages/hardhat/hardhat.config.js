@@ -14,7 +14,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 
 const { isAddress, getAddress, formatUnits, parseUnits } = utils;
-const defaultNetwork = "localhost";
+const defaultNetwork = "optimism";
 const mainnetGwei = 115;
 
 function mnemonic() {
@@ -148,7 +148,7 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW", // "X4EQWCBPJFWJT18EIHX72MJYAIWR9NGRWU", // Polygon/Mumbai
+    apiKey: "KCKUPIMZ6XTNEERFKYYSN4H9954YEU2QFX", // "X4EQWCBPJFWJT18EIHX72MJYAIWR9NGRWU", // Polygon/Mumbai
     // ETH ~ "DNXJA8RX2Q3VZ4URQIWP7Z68CJXQZSC6AW",
   },
 };

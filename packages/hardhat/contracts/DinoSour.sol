@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/SafeERC20.sol";
 
-contract PharoNFT is ERC721, Ownable {
+contract DinoSours is ERC721, Ownable {
     using SafeMath for uint256;
     using Strings for uint256;
     using SafeERC20 for IERC20;
@@ -31,7 +31,7 @@ contract PharoNFT is ERC721, Ownable {
 
     IERC20 public wETH;
 
-    constructor(address _wETH) ERC721("Pharo's Collection", "PHROS") {
+    constructor(address _wETH) ERC721("DinoSours Collection", "DINOSOURS") {
         wETH = IERC20(_wETH);
         _setBaseURI(_baseURI());
         transferOwnership(0xA4ca1b15fE81F57cb2d3f686c7B13309906cd37B);
@@ -44,7 +44,7 @@ contract PharoNFT is ERC721, Ownable {
     /// @dev the base uri for the assets
     function _baseURI() internal pure returns (string memory) {
         return
-            "https://pharo.mypinata.cloud/ipfs/QmP9QzGcxNT6s8f44YPKeCfqu8v14sMqkEe2WK41QCs7FP/";
+            "https://dinosours.mypinata.cloud/ipfs/QmfGwbmbDUDPd7dwL22HeTRoW9fWAjF6HK2FwsdUuEuy13/";
     }
 
     /// @dev set the contract URI for OpenSea

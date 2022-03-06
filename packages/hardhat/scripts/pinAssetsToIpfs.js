@@ -5,8 +5,8 @@ const pinataSDK = require("@pinata/sdk");
 let hash;
 
 const pinata = pinataSDK(
-  "99fcf586ed3246c770cf",
-  "ee4d02abc590616bea734479d7c087e16bef5254b6d0083c39fa91266eccdaf3"
+  "edbd9cd10dfc32668c46",
+  "dabc3eee2a027b5c6feead5479904446fdb2511f13e41e5d684e5b89a3622ffc"
 );
 const fs = require("fs");
 
@@ -18,7 +18,7 @@ const pinFile = async (path) => {
     },
     pinataOptions: {
       cidVersion: 0,
-    }
+    },
   };
   const result = await pinata.pinFileToIPFS(strmFile, options);
 
@@ -33,7 +33,7 @@ const main = async (params) => {
   // loop through the images and pin to pinata
   for (const image of imageFiles) {
     const [index] = image.split(".");
-    // if (index > 0 && index < 1000) {
+    // if (index > 0 && index <= 1) {
     try {
       hash = await pinFile(`./images/${image}`);
 
@@ -50,7 +50,7 @@ const main = async (params) => {
 
       console.log(`Write for image ${index}: IPFS Hash is ${hash}`);
     } catch (error) {
-      console.error(error);
+      console.error("Error: ", error);
     }
     // }
   }
@@ -61,7 +61,7 @@ const main = async (params) => {
       name: "DinoSours",
       keyvalues: {
         series: "1",
-        minted: "02/2022",
+        minted: "03/2022",
       },
     },
     pinataOptions: {

@@ -31,10 +31,10 @@ const Gallery = ({
 }) => {
   const [minting, setMinting] = useState(false);
   const isSigner = injectedProvider && injectedProvider.getSigner && injectedProvider.getSigner()._isSigner;
-  const balance = useContractReader(readContracts, "PharoNFT", "balanceOf", [address]);
-  console.log("Your Pharos Balance: ", balance && balance.toNumber && balance.toNumber());
+  const balance = useContractReader(readContracts, "DinoSours", "balanceOf", [address]);
+  console.log("Your DinoSours Balance: ", balance && balance.toNumber && balance.toNumber());
 
-  // const transferEvents = useEventListener(readContracts, "PharoNFT", "Transfer", localProvider, 1);
+  // const transferEvents = useEventListener(readContracts, "DinoSours", "Transfer", localProvider, 1);
   // console.table("Transfer Events: ", transferEvents);
 
   // todo: add the parameter mintAmount to be passed in
@@ -43,7 +43,7 @@ const Gallery = ({
     if (mintAmount > 5) {
       return;
     }
-    await tx(writeContracts.PharoNFT.mint(address, mintAmount), async update => {
+    await tx(writeContracts.DinoSours.mint(address, mintAmount), async update => {
       console.log("📡 Transaction Update:", update);
       if (update && (update.status === "confirmed" || update.status === 1)) {
         // reset minting

@@ -17,7 +17,7 @@ contract Royalties {
     // Royalties distro addresses
     address private buidlguidlAddress = 0x97843608a00e2bbc75ab0C1911387E002565DEDE;
     address private dinosoursAddy = 0x695392F1f7900bBB8bcc2Fc6991c22FCb0794342;
-    address private ethanaAddress = 0xA9EC89f38a1dC912F1726EE66409a840fFc6a709;
+    address private ethanaAddress = 0x26Df1f32bEBA11048fa9615e08C7f6ABa02231D3;
 
     modifier canWithdraw() {
         require(

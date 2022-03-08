@@ -14,7 +14,14 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   //   log: true,
   // });
 
+  await deploy("Royalties", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
+
   const DinoSoursContract = await ethers.getContract("DinoSours");
+  const RoyaltiesContract = await ethers.getContract("Royalties");
 
   // if (chainId === "31337") {
   //   const deployerWallet = ethers.provider.getSigner();
@@ -31,10 +38,15 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
 
   if (chainId !== "31337") {
     await run("verify:verify", {
-      address: DinoSoursContract.address,
-      contract: "contracts/DinoSours.sol:DinoSours",
+      address: RoyaltiesContract.address,
+      contract: "contracts/Royalties.sol:Royalties",
       constructorArguments: [],
     });
+    // await run("verify:verify", {
+    //   address: DinoSoursContract.address,
+    //   contract: "contracts/DinoSours.sol:DinoSours",
+    //   constructorArguments: [],
+    // });
   }
 };
 module.exports.tags = ["DinoSours"];

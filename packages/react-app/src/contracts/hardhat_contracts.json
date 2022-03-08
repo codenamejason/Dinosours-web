@@ -576,7 +576,7 @@
       "chainId": "10",
       "contracts": {
         "DinoSours": {
-          "address": "0x8F05bADf192664fd3Dd48Dbc0E9aAa5E530E919D",
+          "address": "0x417E54A81C65bA9dc5b52bf97cc1b6B613e050d0",
           "abi": [
             {
               "inputs": [],
@@ -1134,6 +1134,28 @@
                 }
               ],
               "stateMutability": "view",
+              "type": "function"
+            }
+          ]
+        },
+        "Royalties": {
+          "address": "0x9FCfD726E1972bE81CADdBa4e91Fa1e8bc82B745",
+          "abi": [
+            {
+              "stateMutability": "payable",
+              "type": "fallback"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "token",
+                  "type": "address"
+                }
+              ],
+              "name": "withdraw",
+              "outputs": [],
+              "stateMutability": "nonpayable",
               "type": "function"
             }
           ]

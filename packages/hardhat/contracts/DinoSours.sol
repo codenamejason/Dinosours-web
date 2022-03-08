@@ -22,7 +22,7 @@ contract DinoSours is ERC721, Ownable {
     /// @dev Max mint per address
     uint256 public constant maxMintPerTx = 20;
 
-    /// @dev Pharo operating wallet
+    /// @dev Dinosours multi-sig
     address public constant treasury =
         0x695392F1f7900bBB8bcc2Fc6991c22FCb0794342;
 

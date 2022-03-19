@@ -81,7 +81,7 @@ const Gallery = ({
   return (
     <div>
       <div className="m-auto mt-8">
-        <h1 className="intro-title sm:text-4xl text-5xl">Time of the Pharo</h1>
+        <h1 className="intro-title sm:text-4xl text-5xl">DinoSours</h1>
         {/* I want to show the totalMinted here vvvv */}
         <h3 className="intro-title-subtitle sm:text-2xl text-3xl">
           {totalMinted.toString()} minted of 4444 Total Supply
@@ -109,9 +109,6 @@ const Gallery = ({
                   tx={tx}
                   mintNft={mintNft}
                 />
-              </div>
-              <div className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0 align-middle">
-                <p>If the button is stating Not Enough ETH and you know you have ETH then just hit refresh.</p>
               </div>
             </div>
           </section>

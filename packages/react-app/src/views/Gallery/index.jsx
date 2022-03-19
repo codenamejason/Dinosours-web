@@ -40,10 +40,11 @@ const Gallery = ({
   // todo: add the parameter mintAmount to be passed in
   const mintNft = async mintAmount => {
     const saleAmount = 0.05;
+    //console.log(mintAmount && mintAmount);
     if (mintAmount > 20) {
       return;
     }
-    await tx(writeContracts.DinoSours.mint(mintAmount), async update => {
+    await tx(writeContracts.DinoSours.mint(mintAmount && mintAmount), async update => {
       console.log("📡 Transaction Update:", update);
       if (update && (update.status === "confirmed" || update.status === 1)) {
         // reset minting

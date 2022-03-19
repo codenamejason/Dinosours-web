@@ -22,8 +22,8 @@ export default function MintButton({ onClick, address, readContracts, writeContr
   );
 
   const ethPayHandler = async () => {
-    console.log("faccckk");
-    mintNft();
+    //console.log(count);
+    mintNft(count);
   };
 
   return (

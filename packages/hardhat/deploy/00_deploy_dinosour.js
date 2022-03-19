@@ -8,11 +8,11 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   const chainId = await getChainId();
 
   // deploy PharoNFT
-  // await deploy("DinoSours", {
-  //   from: deployer,
-  //   args: [],
-  //   log: true,
-  // });
+  await deploy("DinoSours", {
+    from: deployer,
+    args: [],
+    log: true,
+  });
 
   await deploy("Royalties", {
     from: deployer,
@@ -37,11 +37,11 @@ module.exports = async ({ getNamedAccounts, deployments, getChainId }) => {
   // setUriTx.wait(1);
 
   if (chainId !== "31337") {
-    await run("verify:verify", {
-      address: RoyaltiesContract.address,
-      contract: "contracts/Royalties.sol:Royalties",
-      constructorArguments: [],
-    });
+    // await run("verify:verify", {
+    //   address: RoyaltiesContract.address,
+    //   contract: "contracts/Royalties.sol:Royalties",
+    //   constructorArguments: [],
+    // });
     // await run("verify:verify", {
     //   address: DinoSoursContract.address,
     //   contract: "contracts/DinoSours.sol:DinoSours",

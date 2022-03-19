@@ -3,16 +3,15 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import { Alert, Button } from "antd";
 import "antd/dist/antd.css";
 import Authereum from "authereum";
-import { useContractLoader, useContractReader, useGasPrice, useOnBlock, useUserProviderAndSigner } from "eth-hooks";
+import { useContractLoader, useGasPrice, useUserProviderAndSigner } from "eth-hooks";
 import { useExchangeEthPrice } from "eth-hooks/dapps/dex";
-import { useEventListener } from "eth-hooks/events/useEventListener";
 import Fortmatic from "fortmatic";
 import React, { useCallback, useEffect, useState } from "react";
 import WalletLink from "walletlink";
 import Web3Modal from "web3modal";
 import "./App.css";
 import pharoHead from "./assets/img/pharo head.png";
-import { Account, Faq, Footer, NftBar, SocialMedia, Roadmap, Benefits } from "./components";
+import { Account, Footer, SocialMedia } from "./components";
 import { INFURA_ID, NETWORK, NETWORKS } from "./constants";
 import { Transactor } from "./helpers";
 import { useContractConfig } from "./hooks";
@@ -300,9 +299,9 @@ function App(props) {
     <div className="App bg-gray-intro-gray">
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          {/* <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <img src={pharoHead} className="h-16 w-14 float-left" />
-          </a>
+          </a> */}
           <SocialMedia />
           <div className="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
             <Account
@@ -335,11 +334,11 @@ function App(props) {
           />
         </div>
       </div>
-      <NftBar />
+      {/*  <NftBar />
       <Faq id="faq" />
       <Benefits />
-      <Roadmap />
-      <Footer />
+      <Roadmap /> 
+      <Footer />*/}
       {/* <Contract
         name="PharoNFT"
         signer={userSigner}

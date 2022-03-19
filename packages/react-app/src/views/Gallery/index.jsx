@@ -1,5 +1,6 @@
 import { useContractReader } from "eth-hooks";
 import React, { useEffect, useState } from "react";
+import { ethers } from "../../../../hardhat/node_modules/ethereum-waffle/node_modules/ethers/lib";
 import sample5 from "../../assets/img/gallery_gif.gif";
 import { MintButton } from "../../components";
 import "./Gallery.css";
@@ -37,31 +38,36 @@ const Gallery = ({
   // const transferEvents = useEventListener(readContracts, "DinoSours", "Transfer", localProvider, 1);
   // console.table("Transfer Events: ", transferEvents);
 
-  // todo: add the parameter mintAmount to be passed in
+  // mint nft
   const mintNft = async mintAmount => {
     const saleAmount = 0.05;
     //console.log(mintAmount && mintAmount);
     if (mintAmount > 20) {
       return;
     }
-    await tx(writeContracts.DinoSours.mint(mintAmount && mintAmount), async update => {
-      console.log("📡 Transaction Update:", update);
-      if (update && (update.status === "confirmed" || update.status === 1)) {
-        // reset minting
-        setMinting(true);
-        console.log(" 🍾 Transaction " + update.hash + " finished!");
-        console.log(
-          " ⛽️ " +
-            update.gasUsed +
-            "/" +
-            (update.gasLimit || update.gas) +
-            " @ " +
-            parseFloat(update.gasPrice) / 1000000000 +
-            " gwei",
-        );
-      }
-      setMinting(false);
-    });
+    await tx(
+      writeContracts.DinoSours.mint(mintAmount && mintAmount, {
+        value: ethers.utils.parseEther((saleAmount * mintAmount).toString()),
+      }),
+      async update => {
+        console.log("📡 Transaction Update:", update);
+        if (update && (update.status === "confirmed" || update.status === 1)) {
+          // reset minting
+          setMinting(true);
+          console.log(" 🍾 Transaction " + update.hash + " finished!");
+          console.log(
+            " ⛽️ " +
+              update.gasUsed +
+              "/" +
+              (update.gasLimit || update.gas) +
+              " @ " +
+              parseFloat(update.gasPrice) / 1000000000 +
+              " gwei",
+          );
+        }
+        setMinting(false);
+      },
+    );
   };
 
   const [totalMinted, setTotalMinted] = useState(0);

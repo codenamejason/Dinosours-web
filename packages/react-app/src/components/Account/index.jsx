@@ -96,7 +96,7 @@ export default function Account({
           key="loginbutton"
           onClick={loadWeb3Modal}
           key="second"
-          className="text-white font-junge bg-yellow-gold border-4 border-yellow-brown py-2 px-6 focus:outline-none hover:bg-yellow-brown rounded text-lg"
+          className="text-white font-junge bg-blue-400 border-4 border-blue-900 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
         >
           Connect Wallet
         </button>,

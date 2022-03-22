@@ -121,7 +121,7 @@ const Gallery = ({
         ) : (
           <button
             onClick={loadWeb3Modal}
-            className="text-white font-junge bg-yellow-gold border-4 border-yellow-brown py-2 px-6 focus:outline-none hover:bg-yellow-brown rounded text-lg"
+            className="text-white font-junge bg-blue-400 border-4 border-blue-900 py-2 px-6 focus:outline-none hover:bg-blue-700 rounded text-lg"
           >
             CONNECT WALLET
           </button>

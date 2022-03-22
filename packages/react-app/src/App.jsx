@@ -339,14 +339,6 @@ function App(props) {
       <Benefits />
       <Roadmap />
       <Footer />*/}
-      {/* <Contract
-        name="PharoNFT"
-        signer={userSigner}
-        provider={localProvider}
-        address={address}
-        blockExplorer={blockExplorer}
-        contractConfig={contractConfig}
-      /> */}
     </div>
   );
 }

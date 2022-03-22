@@ -73,7 +73,7 @@ const web3Modal = new Web3Modal({
     walletconnect: {
       package: WalletConnectProvider, // required
       options: {
-        bridge: "https://polygon.bridge.walletconnect.org",
+        bridge: "https://gateway.optimism.io",
         infuraId: INFURA_ID,
         rpc: {
           137: `https://polygon-mainnet.g.alchemy.com/v2/VcCo9LJkIWsE6h9QrXUXk2g2JJEIp4JI`,
@@ -337,7 +337,7 @@ function App(props) {
       {/*  <NftBar />
       <Faq id="faq" />
       <Benefits />
-      <Roadmap /> 
+      <Roadmap />
       <Footer />*/}
       {/* <Contract
         name="PharoNFT"

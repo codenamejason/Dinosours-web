@@ -92,7 +92,7 @@ const Gallery = ({
         <h3 className="intro-title-subtitle sm:text-2xl text-3xl">
           {totalMinted.toString()} minted of 4444 Total Supply
         </h3>
-        <h4>.05 Optimistic ETH</h4>
+        <h4 className="text-red-600">.05 Optimistic ETH</h4>
       </div>
       <div className="m-auto">
         {isSigner ? (

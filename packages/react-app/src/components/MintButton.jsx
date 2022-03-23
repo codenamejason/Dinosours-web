@@ -1,6 +1,5 @@
 import { Button, Dropdown, Menu } from "antd";
-import { ethers } from "ethers";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { MoreHorizontal } from "react-feather";
 import PayButton from "./PayButton";
 

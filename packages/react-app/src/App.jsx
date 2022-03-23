@@ -10,8 +10,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import WalletLink from "walletlink";
 import Web3Modal from "web3modal";
 import "./App.css";
-import pharoHead from "./assets/img/pharo head.png";
-import { Account, Footer, SocialMedia } from "./components";
+import { Account, SocialMedia } from "./components";
 import { INFURA_ID, NETWORK, NETWORKS } from "./constants";
 import { Transactor } from "./helpers";
 import { useContractConfig } from "./hooks";
@@ -334,11 +333,6 @@ function App(props) {
           />
         </div>
       </div>
-      {/*  <NftBar />
-      <Faq id="faq" />
-      <Benefits />
-      <Roadmap />
-      <Footer />*/}
     </div>
   );
 }

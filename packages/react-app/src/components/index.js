@@ -16,11 +16,7 @@ export { default as ThemeSwitch } from "./ThemeSwitch";
 export { default as Timeline } from "./Timeline";
 export { default as TokenBalance } from "./TokenBalance";
 export { default as Wallet } from "./Wallet";
-export { default as Footer } from "./Footer";
-export { default as Faq } from "./Faq";
-export { default as NftBar } from "./NftBar";
 export { default as SocialMedia } from "./SocialMedia";
 export { default as MintButton } from "./MintButton";
 export { default as PayButton } from "./PayButton";
-export { default as Roadmap } from "./Roadmap";
-export { default as Benefits } from "./Benefits";
+

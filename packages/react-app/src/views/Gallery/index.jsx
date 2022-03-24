@@ -1,6 +1,6 @@
 import { useContractReader } from "eth-hooks";
+import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
-import { ethers } from "../../../../hardhat/node_modules/ethereum-waffle/node_modules/ethers/lib";
 import sample5 from "../../assets/images/preview.gif";
 import { MintButton } from "../../components";
 import "./Gallery.css";

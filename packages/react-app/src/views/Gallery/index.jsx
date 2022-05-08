@@ -85,10 +85,9 @@ const Gallery = ({
   }, [minting, balance]);
 
   return (
-    <div>
+    <div className="bg-gray-intro-gray">
       <div className="m-auto mt-8">
         <h1 className="intro-title sm:text-4xl text-5xl">DinoSours</h1>
-        {/* I want to show the totalMinted here vvvv */}
         <h3 className="intro-title-subtitle sm:text-2xl text-3xl">
           {totalMinted.toString()} minted of 4444 Total Supply
         </h3>
@@ -101,7 +100,7 @@ const Gallery = ({
               <div className="lg:w-2/3 md:w-1/2 overflow-hidden sm:mr-10 p-2 flex items-end justify-start relative">
                 <div className="m-auto">
                   <a href={"https://quixotic.io/collection/dinosours"} target="_blank">
-                    <img src={sample5} />
+                    <img src={sample5} width="400" />
                   </a>
                 </div>
               </div>

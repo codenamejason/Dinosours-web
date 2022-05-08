@@ -4,16 +4,14 @@ module.exports = {
   purge: {
     content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
     options: {
-      safelist: ["pyramid-background", "hyroglyph-background", "nft-collage-background"],
+      safelist: ["dinosour-background"],
     },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       backgroundImage: {
-        "pyramid-background": "url('/src/assets/img/pyramid-background.svg')",
-        "hyroglyph-background": "url('/src/assets/img/hyroglyph-background.jpg')",
-        "nft-collage-background": "url('/src/assets/img/nftCollageDark.png')",
+        "dinosour-background": "url('/src/assets/img/iconbg.png')",
       },
       colors: {
         orange: colors.orange,

@@ -295,12 +295,9 @@ function App(props) {
   }, [setRoute]);
 
   return (
-    <div className="App bg-gray-intro-gray">
+    <div className="App  bg-gray-intro-gray">
       <header className="text-gray-600 body-font">
         <div className="container mx-auto flex flex-wrap p-2 flex-col md:flex-row items-center">
-          {/* <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <img src={pharoHead} className="h-16 w-14 float-left" />
-          </a> */}
           <SocialMedia />
           <div className="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
             <Account
@@ -318,7 +315,7 @@ function App(props) {
           </div>
         </div>
       </header>
-      <div className="bg-pyramid-background bg-no-repeat bg-cover">
+      <div className="">
         <div className="bg-gray-intro-gray bg-no-repeat bg-cover bg-opacity-75">
           <Gallery
             readContracts={readContracts}
